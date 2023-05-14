@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import django_celery_beat
+# import django_celery_beat
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import app01.apps
 
@@ -93,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = 'zh-hans'
 
 
 
@@ -138,7 +138,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app01.apps.App01Config",
-    'django_celery_beat',
+    # 'django_celery_beat',
 ]
 
 # celery beat配置
@@ -146,3 +146,4 @@ INSTALLED_APPS = [
 CELERY_TIMEZONE = TIME_ZONE
 DJANGO_CELERY_BEAT_TZ_AWARE = False
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
